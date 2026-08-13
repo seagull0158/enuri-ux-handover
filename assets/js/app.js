@@ -6,10 +6,8 @@
   var sideNavList = document.getElementById('sideNavList');
   var summaryList = document.getElementById('summaryList');
   var emptyMessage = document.getElementById('emptyMessage');
-  var toast = document.getElementById('toast');
 
   var state = { status: 'all' };
-  var toastTimer = null;
 
   var STATUS_CLASS = {
     '반영 완료': 'badge--done',
@@ -142,13 +140,6 @@
     heading.appendChild(el('h2', 'card-title', esc(p.title)));
     if (p.subtitle) heading.appendChild(el('p', 'card-subtitle', esc(p.subtitle)));
     top.appendChild(heading);
-
-    var copyBtn = el('button', 'copy-btn');
-    copyBtn.type = 'button';
-    copyBtn.textContent = '링크 복사';
-    copyBtn.setAttribute('aria-label', p.number + ' ' + p.title + ' 프로젝트 링크 복사');
-    copyBtn.addEventListener('click', function () { copyAnchor(p.id); });
-    top.appendChild(copyBtn);
     card.appendChild(top);
 
     // 3. 상태 배지
@@ -368,33 +359,6 @@
         observer.observe(c);
       });
     });
-  }
-
-  /* ---------- 링크 복사 ---------- */
-  function copyAnchor(id) {
-    var url = location.origin + location.pathname + '#' + id;
-    function done() {
-      toast.hidden = false;
-      clearTimeout(toastTimer);
-      toastTimer = setTimeout(function () { toast.hidden = true; }, 2200);
-    }
-    if (navigator.clipboard && navigator.clipboard.writeText) {
-      navigator.clipboard.writeText(url).then(done, function () { fallbackCopy(url, done); });
-    } else {
-      fallbackCopy(url, done);
-    }
-  }
-
-  function fallbackCopy(text, done) {
-    var ta = document.createElement('textarea');
-    ta.value = text;
-    ta.style.position = 'fixed';
-    ta.style.opacity = '0';
-    document.body.appendChild(ta);
-    ta.select();
-    try { document.execCommand('copy'); } catch (e) { /* 복사 실패 시 무시 */ }
-    document.body.removeChild(ta);
-    done();
   }
 
   /* ---------- 초기화 ---------- */

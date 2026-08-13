@@ -42,7 +42,7 @@ window.PROJECTS = [
     title: '상품상세 서비스 전환 인터랙션',
     status: '반영 완료',
     secondaryStatus: null,
-    platforms: ['APP'],
+    platforms: ['MW'],
     period: null,
     referenceDate: null,
     prototypeUrl: 'https://fab-motion-prototype.vercel.app/',
@@ -73,7 +73,7 @@ window.PROJECTS = [
     referenceDate: null,
     prototypeUrl: 'https://academy-bottom-navigation-review.vercel.app/',
     figmaUrl: 'https://www.figma.com/design/Q1Mh54bEwAB2drsFB6XdAq/%ED%99%88%EB%A9%94%EC%9D%B8_%ED%95%98%EB%8B%A8%ED%83%AD%EB%B0%94--%EC%83%81%EB%8B%A8%EA%B2%80%EC%83%89%EC%B0%BD_%ED%95%99%EC%9B%90%EC%84%9C%EB%B9%84%EC%8A%A4%EC%B6%94%EA%B0%80?node-id=0-1&t=SuCiHymOeibRrH9h-1',
-    figmaLabel: 'Figma (원부 포함)',
+    figmaLabel: 'Figma',
     taskUrls: [
       { label: '일감', url: 'https://project.cowave.kr/enuri/browse/FRONT-2660/' }
     ],
@@ -88,7 +88,7 @@ window.PROJECTS = [
     ],
     linkedProject: null,
     relatedWork: null,
-    pendingLinks: ['상단 고정 탭바 Figma 확인 필요', '상단 고정 탭바 일감 확인 필요'],
+    pendingLinks: [],
     checkNeeded: [
       '상단 고정 탭바 최종 반영 상태 확인 필요'
     ]
@@ -113,7 +113,7 @@ window.PROJECTS = [
     scopeLines: null,
     linkedProject: { id: 'p05', label: '연결 업무' },
     relatedWork: null,
-    pendingLinks: ['디자인 가이드 확인'], // 아이콘 변경건은 기존 디자인 가이드에 적용 후 별도 정리 — 위치 확인 시 URL 연결
+    pendingLinks: [], // 아이콘 변경건은 기존 디자인 가이드에 적용 후 별도 정리 — 위치 확인 시 URL 연결
     checkNeeded: []
   },
   {
