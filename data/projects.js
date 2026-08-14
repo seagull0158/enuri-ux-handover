@@ -20,7 +20,7 @@ window.PROJECTS = [
     period: null,
     referenceDate: '2026.08.13',
     prototypeUrl: 'https://emoney-pedometer-proto.vercel.app/',
-    figmaUrl: 'https://www.figma.com/design/xurE5oN4s7GK4J98gtAQVI/260810_%EC%9D%B4%EB%B2%A4%ED%8A%B8%EC%A0%81%EB%A6%BD_%EB%A7%8C%EB%B3%B4%EA%B8%B0?node-id=19-194&t=T3BdW8phBHrhdyBS-1',
+    figmaUrl: 'https://www.figma.com/design/xurE5oN4s7GK4J98gtAQVI/260810_%EC%9D%B4%EB%B2%A4%ED%8A%B8%EC%A0%81%EB%A6%BD_%EB%A7%8C%EB%B3%B4%EA%B8%B0?node-id=0-1&t=qRZhjwcr3QjQWIt5-1',
     figmaLabel: null,
     taskUrls: [
       { label: '일감', url: 'https://project.cowave.kr/enuri/browse/FRONT-2799/' }
