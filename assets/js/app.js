@@ -148,6 +148,10 @@
     if (p.secondaryStatus) {
       badges.appendChild(badge(p.secondaryStatus, (STATUS_CLASS[p.secondaryStatus] || 'badge--design') + ' badge--sub'));
     }
+    // 배지 옆 작은 보조 텍스트 (예: '로고 변경 완료')
+    if (p.statusNote) {
+      badges.appendChild(el('span', 'status-note', esc(p.statusNote)));
+    }
     card.appendChild(badges);
 
     // 4. 대상 / 기간 / 기준
@@ -194,15 +198,22 @@
       var rw = p.relatedWork;
       var rwSub = el('div', 'sub-card');
       rwSub.appendChild(el('p', 'sub-card-label', '연결 업무'));
-      rwSub.appendChild(el('h3', 'sub-card-title', esc(rw.title)));
+      var rwTitleRow = el('div', 'linked-line');
+      rwTitleRow.style.marginTop = '0';
+      rwTitleRow.appendChild(el('h3', 'sub-card-title', esc(rw.title)));
+      if (rw.status) {
+        rwTitleRow.appendChild(badge(rw.status, (STATUS_CLASS[rw.status] || 'badge--design') + ' badge--sub'));
+      }
+      rwSub.appendChild(rwTitleRow);
       if (rw.platforms && rw.platforms.length) {
         var rwMeta = el('div', 'card-meta');
         rwMeta.appendChild(el('span', null, '<span class="meta-label">대상</span>' + rw.platforms.map(esc).join(' · ')));
         rwSub.appendChild(rwMeta);
       }
-      if (rw.taskUrls && rw.taskUrls.length) {
+      if (rw.figmaUrl || (rw.taskUrls && rw.taskUrls.length)) {
         var rwLinks = el('div', 'link-row');
-        rw.taskUrls.forEach(function (t) { rwLinks.appendChild(extLink(t.label, t.url, false)); });
+        if (rw.figmaUrl) rwLinks.appendChild(extLink('Figma', rw.figmaUrl, false));
+        (rw.taskUrls || []).forEach(function (t) { rwLinks.appendChild(extLink(t.label, t.url, false)); });
         rwSub.appendChild(rwLinks);
       }
       if (rw.sameFigma) {
@@ -250,6 +261,14 @@
       docCard.appendChild(body);
       docSub.appendChild(docCard);
       card.appendChild(docSub);
+    }
+
+    // 연결 일감 — 메인 일감과 구분되는 보조 일감 (동일한 버튼 스타일)
+    if (p.relatedTask) {
+      var rtLine = el('div', 'linked-line');
+      rtLine.appendChild(el('span', 'section-label section-label--inline', '연결 일감'));
+      rtLine.appendChild(extLink(p.relatedTask.label, p.relatedTask.url, false));
+      card.appendChild(rtLine);
     }
 
     // 연결 프로젝트 / 연결 업무 (앵커 이동)

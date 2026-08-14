@@ -22,7 +22,9 @@ window.PROJECTS = [
     prototypeUrl: 'https://emoney-pedometer-proto.vercel.app/',
     figmaUrl: 'https://www.figma.com/design/xurE5oN4s7GK4J98gtAQVI/260810_%EC%9D%B4%EB%B2%A4%ED%8A%B8%EC%A0%81%EB%A6%BD_%EB%A7%8C%EB%B3%B4%EA%B8%B0?node-id=19-194&t=T3BdW8phBHrhdyBS-1',
     figmaLabel: null,
-    taskUrls: [],
+    taskUrls: [
+      { label: '일감', url: 'https://project.cowave.kr/enuri/browse/FRONT-2799/' }
+    ],
     docs: [],
     pdfDocument: null,
     subtitle: null,
@@ -32,14 +34,13 @@ window.PROJECTS = [
     relatedWork: null,
     pendingLinks: [],
     checkNeeded: [
-      '개발 반영·QA 범위 최종 확인 필요',
-      '일감 URL 확인 필요'
+      '개발 반영·QA 범위 최종 확인 필요'
     ]
   },
   {
     id: 'p02',
     number: 'P02',
-    title: '상품상세 서비스 전환 인터랙션',
+    title: '원부상세 통합 플로팅 구좌 신설',
     status: '반영 완료',
     secondaryStatus: null,
     platforms: ['MW'],
@@ -65,9 +66,10 @@ window.PROJECTS = [
     // 기존 P03(홈 하단 탭바 학원 진입 UX 검토) + P04(모바일 홈 상단 고정 탭바) 통합
     id: 'p03',
     number: 'P03',
-    title: '모바일 홈 IA 및 내비게이션 개선',
+    title: '하단 탭바 개편 (학원 탭 신설 · 혜택 GNB 이동)',
     status: '디자인 완료',
     secondaryStatus: '확인 필요',
+    statusNote: '로고 변경 완료',
     platforms: ['MW', 'APP', '홈'],
     period: null,
     referenceDate: null,
@@ -75,19 +77,27 @@ window.PROJECTS = [
     figmaUrl: 'https://www.figma.com/design/Q1Mh54bEwAB2drsFB6XdAq/%ED%99%88%EB%A9%94%EC%9D%B8_%ED%95%98%EB%8B%A8%ED%83%AD%EB%B0%94--%EC%83%81%EB%8B%A8%EA%B2%80%EC%83%89%EC%B0%BD_%ED%95%99%EC%9B%90%EC%84%9C%EB%B9%84%EC%8A%A4%EC%B6%94%EA%B0%80?node-id=0-1&t=SuCiHymOeibRrH9h-1',
     figmaLabel: 'Figma',
     taskUrls: [
-      { label: '일감', url: 'https://project.cowave.kr/enuri/browse/FRONT-2660/' }
+      { label: '일감', url: 'https://project.cowave.kr/enuri/browse/FRONT-2790/' }
     ],
     docs: [],
     pdfDocument: null,
     subtitle: null,
-    subWorkLine: '하위업무 · [MW/APP] 하단 탭바 개편 및 메뉴 구조 개선 — 반영 완료',
+    subWorkLine: null,
     scopeLines: [
       '모바일 홈 상단 고정 헤더 및 검색/Utility 구조 개선',
       '하단 탭바 개편 및 학원 서비스 진입 구조 개선',
       '모바일 홈 상·하단 내비게이션을 하나의 IA 개선 업무로 정리'
     ],
     linkedProject: null,
-    relatedWork: null,
+    relatedWork: {
+      title: '하단 탭바 개편 및 메뉴 구조 개선',
+      status: '반영 완료',
+      platforms: ['MW', 'APP', '홈'],
+      figmaUrl: 'https://www.figma.com/design/wLdj7HOG9N1wj5bwExk910/260526_%ED%99%88-%EC%9D%B8%EB%B2%A4%ED%86%A0%EB%A6%AC-%EB%B6%80%EB%B6%84-%EA%B0%9C%EC%84%A0?node-id=83-8332&t=JAH2DUqwiUwkMZn2-1',
+      taskUrls: [
+        { label: '일감', url: 'https://project.cowave.kr/enuri/browse/FRONT-2660/' }
+      ]
+    },
     pendingLinks: [],
     checkNeeded: [
       '상단 고정 탭바 최종 반영 상태 확인 필요'
@@ -105,7 +115,10 @@ window.PROJECTS = [
     prototypeUrl: null,
     figmaUrl: 'https://www.figma.com/design/WYQFE1qv0VtdbxjoKQlKi4/260318_%EA%B5%AC%EB%8F%85-%EC%84%9C%EB%B9%84%EC%8A%A4-%EA%B0%9C%EC%84%A0-Ph1-?node-id=1020-9770&t=qlKedxXNlV7ocVfk-1',
     figmaLabel: null,
-    taskUrls: [], // 별도 일감 URL 미확인 — 임의 생성 금지
+    taskUrls: [
+      { label: '일감 모바일', url: 'https://project.cowave.kr/enuri/browse/FRONT-2400/' },
+      { label: '일감 PC', url: 'https://project.cowave.kr/enuri/browse/FRONT-2513/' }
+    ],
     docs: [],
     pdfDocument: null,
     subtitle: null,
@@ -119,7 +132,7 @@ window.PROJECTS = [
   {
     id: 'p05',
     number: 'P05',
-    title: '관심상품 페이지 UX 개선',
+    title: '관심상품 페이지 UX 개선(구독 서비스 개선 Ph1)',
     status: '디자인 완료',
     secondaryStatus: '보류',
     platforms: ['MW', 'APP'],
@@ -128,7 +141,11 @@ window.PROJECTS = [
     prototypeUrl: null,
     figmaUrl: 'https://www.figma.com/design/WYQFE1qv0VtdbxjoKQlKi4/260318_%EA%B5%AC%EB%8F%85-%EC%84%9C%EB%B9%84%EC%8A%A4-%EA%B0%9C%EC%84%A0-Ph1-?node-id=0-1&t=HQAzhZegx9uDtSn4-1',
     figmaLabel: null,
-    taskUrls: [],
+    taskUrls: [
+      { label: '일감', url: 'https://project.cowave.kr/enuri/browse/FRONT-2580/' }
+    ],
+    // 연결 일감: 메인 일감과 병렬로 노출하지 않는 보조 일감 링크
+    relatedTask: { label: 'FRONT-2390', url: 'https://project.cowave.kr/enuri/browse/FRONT-2390/' },
     docs: [],
     pdfDocument: {
       title: '가격알림·가격그래프 UX 정책',
@@ -146,7 +163,7 @@ window.PROJECTS = [
     pendingLinks: [],
     checkNeeded: [
       '홀딩 상태 — 재개 시 최신 요구사항 및 개발 범위 확인',
-      '일감 URL·Prototype 확인 필요'
+      'Prototype 확인 필요'
     ]
   },
   {
@@ -225,8 +242,7 @@ window.USAGE_GUIDE = {
 
 // 추가 입력이 필요한 항목 (하단 체크리스트)
 window.PENDING_INPUTS = [
-  'P01 만보기 일감 URL',
   'P03 상단 고정 탭바 Figma / 일감',
   'P04 관심상품 버튼 최종 디자인 가이드 위치',
-  'P05 관심상품 페이지 일감 URL 및 Prototype'
+  'P05 관심상품 페이지 Prototype'
 ];

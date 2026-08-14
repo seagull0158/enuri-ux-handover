@@ -296,6 +296,11 @@ a:focus-visible {
 .badge--hold    { background: var(--amber-bg);  color: var(--amber);  border-color: #eee0bd; }
 .badge--check   { background: var(--amber-bg);  color: var(--amber);  border-color: #eee0bd; }
 .badge--sub     { opacity: 0.85; }
+.badge-row .status-note {
+  font-size: 12px;
+  color: var(--text-muted);
+  align-self: center;
+}
 
 .card-meta {
   display: flex;
